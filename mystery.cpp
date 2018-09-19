@@ -14,18 +14,48 @@ void mystery1(auto& D)
 {
   cout<<endl<<"Mystery 1"<<endl<<"---------------------"<<endl;
 
-  for ( int i = 0 ; i < Data.size( ) ; i++)
+  for ( int i = 0 ; i < D.size( ) ; i++)
   {
     for ( int j = 0 ; j < i ; j++)
-	if ( Data[ i ] < Data[ j ] )
-	    swap( Data[ i ] , Data[ j ] );
+	if ( D[ i ] < D[ j ] )
+	    swap( D[ i ] , D[ j ] );
 
     print(D);
   }//end outer for (this brace is needed to include the print statement)
 
 }
 
-//... Other mysteries...
+void mystery2(auto& D)
+{
+  cout<<endl<<"Mystery 2"<<endl<<"---------------------"<<endl;
+
+  for ( int i = 0 ; i < D.size( ) ; i++)
+  {
+    for ( int j = 0 ; j < D.size() -1 ; j++)
+	if ( D[ j+1 ] < D[ j ] )
+	    swap( D[ j + 1 ] , D[ j ] );
+
+    print(D);
+  }//end outer for (this brace is needed to include the print statement)
+
+}
+
+void mystery3(auto& D)
+{
+  cout<<endl<<"Mystery 3"<<endl<<"---------------------"<<endl;
+
+  for ( int i = 0 ; i < D.size( ) ; i++)
+  {
+    for ( int j = i ; j < D.size() ; j++)
+	if ( D[ j ] < D[ i ] )
+	    swap( D[ i ] , D[ j ] );
+
+    print(D);
+  }//end outer for (this brace is needed to include the print statement)
+
+}
+
+
 
 int main()
 {
